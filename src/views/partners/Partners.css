@@ -1,0 +1,46 @@
+.partners-content {
+  padding-inline: 150px;
+  padding-top: 30px;
+}
+
+.partners-panels {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.partners-selection-panel {
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  border-radius: 0px;
+}
+
+.partners-card-panel {
+  flex: 1;
+  overflow: scroll;
+  height: 100%;
+}
+
+@media (pointer:none), (pointer:coarse) {
+  /* Phones */
+  @media (min-width:240px) {
+    .partners-content {
+      padding-inline: 10px;
+      padding-top: 0;
+      margin-top: 12vh;
+      margin-inline: auto;
+      width: 90vw;
+    }
+
+    .smaller_button {
+      height: 14vw;
+      width: 16vw;
+      margin-right: 5px;
+    }
+  }
+
+  /* Tablets */
+  @media (min-width:641px) {}
+}

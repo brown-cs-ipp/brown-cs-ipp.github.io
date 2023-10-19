@@ -1,0 +1,25 @@
+body {
+    color: black
+}
+.about {
+    display: flex;
+    flex-direction: row;
+    margin: 2em 7em;
+}
+.about-text {
+    margin-right: 8em;
+}
+.about-text h2 {
+    font-size: 36px;
+}
+.about-text p {
+    font-size: 20px;
+}
+.about-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.about-icons img {
+    margin: 0.5em 0 0.5em
+}

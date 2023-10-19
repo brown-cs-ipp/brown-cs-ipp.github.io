@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Charlotte Chan Lee",
+        "role": "Team Lead",
+        "image": "images/member.png"
+    },
+    {
+        "name": "Member 2",
+        "role": "Role 2",
+        "image": "images/member_fill.png"
+    },
+    {
+        "name": "Member 3",
+        "role": "Role 3",
+        "image": "images/member_fill.png"
+    },
+    {
+        "name": "Member 4",
+        "role": "Role 4",
+        "image": "images/member_fill.png"
+    }
+  ]
+  

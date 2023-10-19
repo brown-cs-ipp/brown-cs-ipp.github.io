@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.homepage {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: 16px;
+    font-family: franklin-gothic-atf, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    /* background: linear-gradient(180deg, white 93%, rgb(211, 213, 246) 95%, rgb(19, 43, 106) 100%); */
+    /* background-color: #08005F; */
+    color: rgb(19, 43, 106);
+}
+
+.home_spec_width {
+    width: 450px;
+}
+
+.home_page_percentage {
+    width: 70%;
+}
+
+.home_badge_button {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    height: 100px;
+    width: 105px;
+    outline: transparent 5px;
+    margin-right: 10px;
+    transition: all ease 0.2s;
+}
+
+.home_badge_img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* offset-x, offset-y, blur, color */
+    filter: drop-shadow(5px 2px 5px rgb(159, 158, 158));
+}
+
+.home_badge_button:focus, .home_badge_button:hover {
+    height: 105px;
+    width: 105px;
+    outline: rgb(19, 43, 106, 0.3) solid 2px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.home_splash {
+    mask: linear-gradient(to bottom, 
+      rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 85%, 
+      rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+  ) 100% 50% / 100% 100% repeat-x;
+}
+
+.home_section {
+    margin-bottom: 6rem;
+}
+
+.home_section_background {
+    flex-direction: row;
+    height: 100vh;
+    display: flex;
+}
+
+.home_section_background_left {
+    width: 35vw;
+    height: 100vh;
+}
+
+.home_section_background_right {
+    width: 65vw;
+    height: 100vh;
+    display: block;
+}
+
+.home_section_background_right_img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.08;
+}
+
+.home_section_background_right_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 70%;
+    max-height: 50%;
+    padding-right: 10%; 
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+
+.home_staff_portrait_div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: start;
+    width: 200px;
+    height: 200px;
+    margin: 0;
+}
+
+.home_staff_name {
+    /* width: 500px; */
+    font-weight: 300;
+    font-size: 20px;
+    font-family: "minion-pro", serif;
+    text-align: center;
+}
+
+.home_staff_text {
+    /* width: 500px; */
+    font-weight: 200;
+    text-align: center;
+    font-size: 16px;
+}
+
+@media (pointer:none), (pointer:coarse) {
+    /* Phones */
+    @media (min-width:240px) {
+        .home_section {
+            /* height: 100vh; */
+            margin-bottom: 0;
+        }
+
+        .home_section_background {
+            flex-direction: column;
+            height: 100vh;
+            display: flex;
+        }
+
+        .home_section_background_left {
+            width: 100vw;
+            height: 50vh;
+            object-fit: cover;
+        }
+
+        .home_section_background_right {
+            width: 100vw;
+            height: 70vh;
+            display: block;
+        }
+
+        .home_section_background_right_text {
+            display: flex;
+            flex-direction: column;
+            max-width: 80vw;
+            max-height: 70vh;
+            position: absolute;
+            top: 15%;
+            left: 10vw;
+        }
+
+        .home_section_background_right_img {
+            width: 100vw;
+            height: 100%;
+            opacity: 0.08;
+            object-fit: cover;
+        }
+
+        .home_identity_selection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .home_identity_result {
+            display: flex;
+            flex-direction: column;
+            margin: 30px 50px 50px 50px;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .home_badge_button {
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            height: 18vw;
+            width: 19vw;
+            outline: transparent 5px;
+            margin-right: 10px;
+            transition: all ease 0.2s;
+        }
+
+        .home_badge_button:focus, .home_badge_button:hover {
+            height: 20vw;
+            width: 21vw;
+        }
+
+        .home_staff_portrait_div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            width: 100px;
+            height: 100px;
+        }
+
+        .home_staff_portrait {
+            display: inline-block;
+        }
+    }
+
+    /* Tablets */
+    @media (min-width:641px) {}
+}

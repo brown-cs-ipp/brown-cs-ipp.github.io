@@ -1,0 +1,21 @@
+root {
+  /* this is where we will store all global css values */
+}
+
+/* .desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+} */
+
+@media (pointer:none), (pointer:coarse) {
+  /* .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  } */
+}

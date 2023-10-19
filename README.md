@@ -1,2 +1,5 @@
-# brown-cs-ipp.github.io
-Website for Brown CS Industry Partner Program
+### Development: `npm start`
+### Deployment: `npm run deploy`
+### Todos:
+- `npm install`
+- happy hacking!

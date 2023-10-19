@@ -1,0 +1,86 @@
+body {
+    margin-top: 70px;
+  }
+
+.code-block{
+    background-image: url(./temp_imgs/appbg.png);
+    background-size: cover;
+}
+.application-button {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: powderblue;
+    width: max-content;
+    user-select: none;
+}
+
+.application-container {
+    margin: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.apply-page {
+    background: #fafafa; /* replace with your preferred color or image */
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.input-row {
+    width: 57ch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.input-radio {
+    padding-left: 20px;
+    display: flex;
+}
+
+.value-accordian {
+    display: flex;
+    flex-direction: row;
+}
+
+.value-accordian-header {
+    flex: 1;
+}
+
+.value-accordian-content {
+    flex: 2;
+}
+
+@font-face {
+    font-family: "franklin-gothic-atf", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    src: url('https://use.typekit.net/knm8cnu.css') format('truetype');
+}
+
+@media (pointer:none), (pointer:coarse) {
+    /* Phones */
+    @media (min-width:240px) {
+        body {
+            width: 100vw;
+        }
+
+        .input-row {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .value-accordian {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    /* Tablets */
+    @media (min-width:641px) {}
+}
