@@ -1,21 +1,25 @@
 {
   "files": {
     "main.css": "/static/css/main.9d956328.css",
-    "main.js": "/static/js/main.6fb30c33.js",
+    "main.js": "/static/js/main.a186a9dc.js",
     "static/media/CIT_wide.jpg": "/static/media/CIT_wide.408993d66af434bc1c54.jpg",
     "static/media/Justin_Picture.jpg": "/static/media/Justin_Picture.bfb46a505540e5a5ed31.jpg",
     "static/media/students.jpg": "/static/media/students.4a2497d3d9ff49b7d1a1.jpg",
     "static/media/CIT.jpg": "/static/media/CIT.8abe07154403ad42c65b.jpg",
-    "static/media/CAB.png": "/static/media/CAB.5f6385a039b9221f4f3a.png",
+    "static/media/CAB.png": "/static/media/CAB.3246c7a0d0edb1cfa159.png",
     "static/media/CIT_cropped.jpg": "/static/media/CIT_cropped.8f6df532f98b0855f237.jpg",
     "static/media/Lauren_Picture.jpg": "/static/media/Lauren_Picture.eda44d39791c75e6bc12.jpg",
+    "static/media/CS-Dept.png": "/static/media/CS-Dept.fa4718c056486f03d200.png",
     "static/media/Herbert_Picture.jpg": "/static/media/Herbert_Picture.07a96ebdda029818b45e.jpg",
     "static/media/Ze_Hua_Picture.jpg": "/static/media/Ze_Hua_Picture.c807fc7aed5049718720.jpg",
     "static/media/Charlotte_Picture.jpg": "/static/media/Charlotte_Picture.1359f8eb0b75a7a632b8.jpg",
     "static/media/Kendra_Picture.jpg": "/static/media/Kendra_Picture.2c451309a7777367a945.jpg",
     "static/media/Stephanie_Picture.jpg": "/static/media/Stephanie_Picture.ace4a5a38d13958ba18b.jpg",
     "static/media/Brown-Site.jpg": "/static/media/Brown-Site.5fd9d570a285c29a7ce4.jpg",
+    "static/media/Climate-Tech.png": "/static/media/Climate-Tech.3c208300f2eba4873859.png",
+    "static/media/Brown-Connect.png": "/static/media/Brown-Connect.bb5cbcd8c7cfe9546069.png",
     "static/media/appbg.png": "/static/media/appbg.182c0c69052e9c8a401e.png",
+    "static/media/Handshake.png": "/static/media/Handshake.be46a2777c5b83a2fdfb.png",
     "static/media/Grant_Picture.jpg": "/static/media/Grant_Picture.0f819e97c13919df5697.jpg",
     "static/media/IPP Membership Levels.pdf": "/static/media/IPP Membership Levels.2c842ac0f10a543a7275.pdf",
     "static/media/badges.png": "/static/media/badges.d861c03de652f9817d74.png",
@@ -28,10 +32,10 @@
     "static/media/ipp_badge_social.png": "/static/media/ipp_badge_social.e0601dab0a9daf2582ff.png",
     "index.html": "/index.html",
     "main.9d956328.css.map": "/static/css/main.9d956328.css.map",
-    "main.6fb30c33.js.map": "/static/js/main.6fb30c33.js.map"
+    "main.a186a9dc.js.map": "/static/js/main.a186a9dc.js.map"
   },
   "entrypoints": [
     "static/css/main.9d956328.css",
-    "static/js/main.6fb30c33.js"
+    "static/js/main.a186a9dc.js"
   ]
 }
