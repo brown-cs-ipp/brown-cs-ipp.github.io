@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import {
+  Paper,
+  Button,
+  Grid,
+  Card,
+  CardContent,
+  CardMedia,
   Typography,
-  List,
-  ListItem,
-  ListItemText,
-  Link,
-  ThemeProvider,
-  createTheme,
+  Box,
 } from "@mui/material";
 import {
   BrowserView,
@@ -14,7 +15,10 @@ import {
   isBrowser,
   isMobile,
 } from "react-device-detect";
+import { createTheme, ThemeProvider } from "@mui/material";
 import "./Resources.css";
+import brownSite from "./Brown-Site.jpg";
+import cabSite from "./CAB.png";
 
 const theme = createTheme({
   typography: {
@@ -31,32 +35,103 @@ const theme = createTheme({
   },
 });
 
+const linksData = [
+  {
+    title: "Brown Site",
+    description: "Brown's Official Site",
+    image: brownSite,
+    link: "https://www.brown.edu/",
+  },
+  {
+    title: "CAB",
+    description: "Courses @ Brown",
+    image: cabSite,
+    link: "https://cab.brown.edu/",
+  },
+];
+
 export default function Resources() {
-  const [links] = useState([
-    { name: "Brown CS Department", url: "https://cs.brown.edu/" },
-    { name: "Canvas", url: "https://canvas.brown.edu/" },
-    { name: "GitHub", url: "https://github.com/" },
-    { name: "Stack Overflow", url: "https://stackoverflow.com/" },
-  ]);
+  const [view, setView] = useState("grid");
 
   return (
     <BrowserView>
       <ThemeProvider theme={theme}>
-        <Typography variant="h4">Useful Links</Typography>
-
-        <List>
-          {links.map((link) => (
-            <ListItem key={link.name}>
-              <ListItemText
-                primary={
-                  <Link href={link.url} target="_blank" rel="noopener">
-                    {link.name}
-                  </Link>
-                }
-              />
-            </ListItem>
-          ))}
-        </List>
+        <br />
+        <Typography variant="h4" align="center">
+          Useful Resources
+        </Typography>
+        <br />
+        <div
+          style={{
+            width: "80%",
+            margin: "auto",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          {view === "grid" ? (
+            <>
+              <Button
+                variant="contained"
+                style={{ marginRight: "0.5rem" }}
+                onClick={() => setView("grid")}
+              >
+                Grid View
+              </Button>
+              <Button variant="outlined" onClick={() => setView("list")}>
+                List View
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button
+                variant="outlined"
+                style={{ marginRight: "0.5rem" }}
+                onClick={() => setView("grid")}
+              >
+                Grid View
+              </Button>
+              <Button variant="contained" onClick={() => setView("list")}>
+                List View
+              </Button>
+            </>
+          )}
+        </div>
+        <br />
+        <div style={{ width: "80%", margin: "auto" }}>
+          <Paper elevation={3} style={{ padding: "1rem" }}>
+            <Box m={4}>
+              <Grid container spacing={4}>
+                {linksData.map((item) => (
+                  <Grid item xs={view === "grid" ? 4 : 12} key={item.title}>
+                    <Card>
+                      <CardMedia
+                        component="img"
+                        height="200vh"
+                        image={item.image}
+                        alt={item.title}
+                      />
+                      <CardContent>
+                        <Typography variant="h5">{item.title}</Typography>
+                        <Typography>{item.description}</Typography>
+                        <br />
+                        <Button
+                          style={{ marginRight: "0.5rem" }}
+                          variant="outlined"
+                        >
+                          More Info
+                        </Button>
+                        <Button variant="contained" target="_blank" href={item.link}>
+                          Website
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                ))}
+              </Grid>
+            </Box>
+          </Paper>
+        </div>
       </ThemeProvider>
     </BrowserView>
   );
