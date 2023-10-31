@@ -16,13 +16,8 @@ import {
   isMobile,
 } from "react-device-detect";
 import { createTheme, ThemeProvider } from "@mui/material";
-import "./Resources.css";
-import brownSite from "./Brown-Site.jpg";
-import cabSite from "./CAB.png";
-import csDept from "./CS-Dept.png";
-import brownConnect from "./Brown-Connect.png";
-import handshake from "./Handshake.png";
-import climateTech from "./Climate-Tech.png";
+import "./Blogs.css";
+import blog_img from "./blog.jpg";
 
 const theme = createTheme({
   typography: {
@@ -39,59 +34,45 @@ const theme = createTheme({
   },
 });
 
-const linksData = [
+const blogsData = [
   {
-    title: "Brown Site",
-    description: "Brown's Official Site.",
-    image: brownSite,
-    link: "https://www.brown.edu/",
+    title: "Blog Post 1",
+    date: "Jan 1, 2021",
+    description: "Description 1",
+    image: blog_img,
   },
   {
-    title: "CAB",
-    description: "Courses @ Brown.",
-    image: cabSite,
-    link: "https://cab.brown.edu/",
+    title: "Blog Post 2",
+    date: "Jan 2, 2021",
+    description: "Description 2",
+    image: blog_img,
   },
   {
-    title: "Handshake",
-    description:
-      "Handshake is Brown’s online recruiting platform for students and alumni that simplifies the search for internships, jobs and learning opportunities.",
-    image: handshake,
-    link: "https://brown.joinhandshake.com/login",
+    title: "Blog Post 3",
+    date: "Jan 3, 2021",
+    description: "Description 3",
+    image: blog_img,
   },
   {
-    title: "BrownConnect",
-    description:
-      "BrownConnect links students, alumni, parents and friends to extend learning beyond the classroom and promote mentoring and professional growth long past graduation.",
-    image: brownConnect,
-    link: "https://brownconnect.brown.edu/ds/index",
-  },
-  {
-    title: "CS Department Site",
-    description: "Official Site of the CS Department.",
-    image: csDept,
-    link: "https://cs.brown.edu/",
-  },
-  {
-    title: "ClimateTechList",
-    description: "Tracking hundreds of early career jobs, university internships, & fellowships from 1,003 climate tech companies.",
-    image: climateTech,
-    link: "https://www.climatetechlist.com/university",
+    title: "Blog Post 4",
+    date: "Jan 4, 2021",
+    description: "Description 4",
+    image: blog_img,
   },
 ];
 
-export default function Resources() {
+export default function Blogs() {
   return (
     <BrowserView>
       <ThemeProvider theme={theme}>
         <br />
         <Typography variant="h4" align="center">
-          Useful Resources
+          Blogs
         </Typography>
         <div style={{ width: "80%", margin: "auto" }}>
           <Box m={4}>
             <Grid container spacing={4} alignItems="stretch">
-              {linksData.map((item) => (
+              {blogsData.map((item) => (
                 <Grid item xs={4} key={item.title}>
                   <Card
                     style={{
@@ -112,17 +93,11 @@ export default function Resources() {
                     </CardContent>
                     <Box p={2}>
                       <Button
-                        style={{ marginRight: "0.5rem" }}
-                        variant="outlined"
-                      >
-                        More Info
-                      </Button>
-                      <Button
                         variant="contained"
                         target="_blank"
                         href={item.link}
                       >
-                        Website
+                        Read More
                       </Button>
                     </Box>
                   </Card>

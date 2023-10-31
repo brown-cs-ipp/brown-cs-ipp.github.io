@@ -119,6 +119,20 @@ export default function NavBar() {
                 <b>RESOURCES</b>
               </Typography>
             </NavLink>
+
+            <NavLink
+              className="navbar-links"
+              to="/blogs"
+              style={({ isActive }) => ({
+                color: isActive ? "#193AA5" : "#000000",
+                borderBottom: isActive ? "2px solid #193AA5" : "none",
+                background: isActive ? "#fff" : "#fff",
+              })}
+            >
+              <Typography>
+                <b>BLOGS</b>
+              </Typography>
+            </NavLink>
           </ThemeProvider>
         </div>
       </div>
@@ -203,6 +217,23 @@ export default function NavBar() {
               >
                 <Typography>
                   <b>RESOURCES</b>
+                </Typography>
+              </NavLink>
+            </div>
+
+            <div className="navbar-links-mobile">
+              <NavLink
+                className="navbar-links-mobile"
+                onClick={toggleMobileMenu}
+                to="/blogs"
+                style={({ isActive }) => ({
+                  color: isActive ? "#193AA5" : "#000000",
+                  background: isActive ? "#fff" : "#fff",
+                  borderBottom: isActive ? "2px solid #193AA5" : "none",
+                })}
+              >
+                <Typography>
+                  <b>BLOGS</b>
                 </Typography>
               </NavLink>
             </div>

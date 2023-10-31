@@ -8,6 +8,7 @@ import Home from "./views/home/Home";
 import Partners from "./views/partners/Partners";
 import Application from "./views/application/Application";
 import Resources from "./views/resources/Resources";
+import Blogs from "./views/blogs/Blogs";
 import {
   getCurrentPartners,
   getPartnerData,
@@ -57,6 +58,10 @@ const router = createHashRouter(
         {
           path: "resources",
           element: <Resources />,
+        },
+        {
+          path: "blogs",
+          element: <Blogs />
         }
       ],
     },
