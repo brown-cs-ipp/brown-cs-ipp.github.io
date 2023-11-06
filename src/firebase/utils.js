@@ -99,7 +99,7 @@ export const logOut = () =>
  */
 export const submitCompanyApplication = async (id, info) => {
   console.log(id, info);
-  return set(db_ref(firebase_db, `partner-application/${id}`), {
+  return set(db_ref(firebase_db, `applications/${id}`), {
     ...info,
     pending: true, // temporary field -- want some way to filter reviewed applications in internal tool
   });
@@ -125,7 +125,7 @@ export const getCurrentPartners = async () => {
 
 export const validateApplicationCode = async (id) => {
   if (id) {
-    return get(child(db_ref(firebase_db), `partner-application/${id}`))
+    return get(child(db_ref(firebase_db), `codes/${id}`))
       .then((snapshot) => {
         return snapshot.exists();
       })

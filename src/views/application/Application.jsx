@@ -361,10 +361,6 @@ export default function Application() {
     // setErrors({ ...errors, invalidId: false });
     // setApplicationInfo({ ...applicationInfo, validCode: true });
   };
-  // codes that should work rn:
-  // test-company-1
-  // test-company-2
-  // test-william
 
 
   return (
@@ -412,7 +408,7 @@ export default function Application() {
                             ? "Thank you! Please proceed to fill out the form."
                             : ""
                       }
-                      helperTextStyles={{ color:  errors.invalidId ? "red" : applicationInfo.validCode ? "#193AA5" : "" }}
+                      // helperTextStyles={{ color:  errors.invalidId ? "red" : applicationInfo.validCode ? "#193AA5" : "" }}
                     />
                   </Box>
                   <Button
