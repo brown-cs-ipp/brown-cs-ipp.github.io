@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
@@ -44,70 +44,75 @@ const theme = createTheme({
 
 const pastEvents = [
   {
-    title: "2022 Peer Career Advising Panel",
+    title: "Peer Career Advising Panel",
     date: "Wednesday November 9th, 2022, 5:30pm",
     location: "Macmillan Hall 117",
     description: `We welcomed students to our CS Careers Peer Advising Panel, hosted by the Industry Partners Program. The event featured four upperclassmen speakers from diverse backgrounds, sharing insights about their journeys and experiences within the CS industry, alongside invaluable recruiting advice. Attendees had the opportunity to learn about identifying suitable internships and jobs and planning their future trajectories in the CS field. An interactive Q&A session allowed participants to address all their CS-related queries. 
-    
-    We were pleased to host students across various CS experience levels. Those with even a fleeting interest in CS joined us, gleaning insights from firsthand accounts in diverse tech sectors and having their pressing questions addressed. After the event, students stayed to chat with panelists informally and ask individual questions.`,
+
+We were pleased to host students across various CS experience levels. Those with even a fleeting interest in CS joined us, gleaning insights from firsthand accounts in diverse tech sectors and having their pressing questions addressed. After the event, students stayed to chat with panelists informally and ask individual questions.`,
     image: event_img,
   },
   {
-    title: "2022 Ascend Analytics Info Session",
+    title: "Ascend Analytics Info Session",
     date: "Monday, November 14, 2022, 5:30 PM",
     location: "Metcalf Chem Auditorium",
     description: `The Ascend Analytics info session provided insights into their innovative "climate tech" services revolutionizing energy analytics and consulting in the electric grid.
 
-    Ascend Analytics offered advanced energy analytic products, serving short and long-term power supply decisions. With offices in Boulder, Colorado, Bozeman, Montana, and Oakland, California, their solutions benefited energy companies in North America and Europe.
-    
-    The company emphasized accurate modeling of risk variables amidst evolving energy markets. Their single analytical platform enabled portfolio optimization. Ascend Analytics was actively hiring for various positions. 
-    
-    They provided clients open access to a dedicated team of energy analysts and system experts to maximize solution value.
-    
-    For more information about Ascend Analytics, visit their website or contact them directly.`,
+Ascend Analytics offered advanced energy analytic products, serving short and long-term power supply decisions. With offices in Boulder, Colorado, Bozeman, Montana, and Oakland, California, their solutions benefited energy companies in North America and Europe.
+
+The company emphasized accurate modeling of risk variables amidst evolving energy markets. Their single analytical platform enabled portfolio optimization. Ascend Analytics was actively hiring for various positions. 
+
+They provided clients open access to a dedicated team of energy analysts and system experts to maximize solution value.
+
+For more information about Ascend Analytics, visit their website or contact them directly.`,
     image: event_img,
   },
   {
-    title: "2022 Info Session with Dana from Solar Stewards",
-    date: "",
+    title: "Info Session with Dana from Solar Stewards",
+    date: "2022",
     location: "",
-    description: `Dana Clare Redden, Brown University alumnus, joined us at Brown University via Zoom to speak about her work at Solar Stewards and the internship opportunities available for students who have experience with CS courses and are interested in enviornmental, societal, and governance goals (ESG) with an innovative public-private-partnership for distributed generation solar development. Dana was seeking interns from multiple fields, project management, business strategy, blockchain, and students with interest in low-code platforms like Bubble.io.`,
+    description:
+      "Dana Clare Redden, Brown University alumnus, joined us at Brown University via Zoom to speak about her work at Solar Stewards and the internship opportunities available for students who have experience with CS courses and are interested in enviornmental, societal, and governance goals (ESG) with an innovative public-private-partnership for distributed generation solar development. Dana was seeking interns from multiple fields, project management, business strategy, blockchain, and students with interest in low-code platforms like Bubble.io.",
     image: event_img,
   },
   {
-    title: "2022 LinkedIn Headshot Event",
-    date: "Friday, March 17th, 1:00 EDT",
+    title: "LinkedIn Headshot Event",
+    date: "Friday, March 17th, 2022, 1:00pm EDT",
     location: "Watson Center for Information Technology (CIT), Room 101",
-    description: "The IPP team welcomed students to drop-in and take a LinkedIn headshot in the first floor of the CIT, with over 100 student attendees taking advantage of this free opportunity. We will be running more professional headshot drop-in events soon, so be on the lookout for announcements if you missed our last one.",
+    description:
+      "The IPP team welcomed students to drop-in and take a LinkedIn headshot in the first floor of the CIT, with over 100 student attendees taking advantage of this free opportunity. We will be running more professional headshot drop-in events soon, so be on the lookout for announcements if you missed our last one.",
     image: event_img,
   },
   {
-    title: "2023 Bloomberg Info Session",
-    date: "Tuesday, September 12th, 5:30pm EDT",
-    location: "Watson Center for Information Technology (CIT), 3rd Floor Atrium",
-    description: "Bloomberg, one of the official Brown CS Industry Partners, joined us in person at Brown for an info-session about their hiring opportunities and job culture. This info session involved a technical interview workshop, where students learned how to ace a technical interview when applying for the role of software engineer.",
+    title: "Bloomberg Info Session",
+    date: "Tuesday, September 12th, 2023, 5:30pm EDT",
+    location:
+      "Watson Center for Information Technology (CIT), 3rd Floor Atrium",
+    description:
+      "Bloomberg, one of the official Brown CS Industry Partners, joined us in person at Brown for an info-session about their hiring opportunities and job culture. This info session involved a technical interview workshop, where students learned how to ace a technical interview when applying for the role of software engineer.",
     image: event_img,
   },
   {
-    title: "2023 Industry Night – Deloitte and Jane Street",
+    title: "Industry Night – Deloitte and Jane Street",
     date: "Tuesday September 19th, 2023, 5:30pm EDT",
-    location: "Watson Center for Information Technology (CIT), 3rd Floor Atrium",
+    location:
+      "Watson Center for Information Technology (CIT), 3rd Floor Atrium",
     description: `Industry night was an engaging event that provided students with valuable insights into industry opportunities. The event featured two prominent industry partners, Deloitte and Jane Street, who shared information about the companies they represented and discussed internship and full-time job opportunities. Attendees also had the opportunity to ask questions and gain a deeper understanding of these organizations.
 
-    The event took place on the 3rd floor of the CIT, where each company delivered short pitches to the students. Afterward, the gathering moved to the 3rd floor for food and conversations, creating an excellent networking opportunity for all participants.
+The event took place on the 3rd floor of the CIT, where each company delivered short pitches to the students. Afterward, the gathering moved to the 3rd floor for food and conversations, creating an excellent networking opportunity for all participants.
 
-    This event was a significant success, attracting a substantial turnout of over 400 students eager to explore career prospects and engage with industry leaders. While this event has concluded, we encourage you to stay connected with Brown Computer Science for future events and opportunities.`,
+This event was a significant success, attracting a substantial turnout of over 400 students eager to explore career prospects and engage with industry leaders. While this event has concluded, we encourage you to stay connected with Brown Computer Science for future events and opportunities.`,
     image: event_img,
   },
   {
-    title: "2023 Climate Tech with Steven Zhang and Option Zero",
+    title: "Climate Tech with Steven Zhang and Option Zero",
     date: "Thursday September 14th, 2023, 5:30pm EDT",
     location: "Zoom",
     description: `We welcomed Steven Zhang from ClimateTechList and Jamie and Jason Curtis from OptionZero for an info session about careers in the intersection between software and climate. 
 
-    Steven Zhang runs ClimateTechList, a job board that tracks thousands of job openings at high impact tech companies, with filterable categories to maximize your job search. With many students interested in the climate space, Steven was able to contextualize what it means to work in climate software, describing the different kinds of companies and how their technological products directly or indirectly result in climate action, providing us with a more nuanced understanding of the climate-tech space. 
+Steven Zhang runs ClimateTechList, a job board that tracks thousands of job openings at high impact tech companies, with filterable categories to maximize your job search. With many students interested in the climate space, Steven was able to contextualize what it means to work in climate software, describing the different kinds of companies and how their technological products directly or indirectly result in climate action, providing us with a more nuanced understanding of the climate-tech space. 
 
-    Jaime and Jason Curtis are a husband and wife team that run Option Zero, a software consultancy for climate companies and initatives. They provided insightful career advice, comparing both of their career paths since graduating college, and spoke about why they moved from company to company, and then eventually started their own consultancy. They emphasized weighing the costs and benefits of working at large tech companies versus smaller startups, and seeking opportunities based on whether you are interested in gaining mentorship or ownership over your work.`,
+Jaime and Jason Curtis are a husband and wife team that run Option Zero, a software consultancy for climate companies and initatives. They provided insightful career advice, comparing both of their career paths since graduating college, and spoke about why they moved from company to company, and then eventually started their own consultancy. They emphasized weighing the costs and benefits of working at large tech companies versus smaller startups, and seeking opportunities based on whether you are interested in gaining mentorship or ownership over your work.`,
     image: event_img,
   },
 ];
@@ -127,11 +132,27 @@ export default function Events() {
     setOpenModal({ ...openModal, [title]: false });
   };
 
+  const [arrowOpacity, setArrowOpacity] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollValue = window.scrollY;
+      const newOpacity = Math.max(1 - scrollValue / 200, 0);
+      setArrowOpacity(newOpacity);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <BrowserView align="center">
       <ThemeProvider theme={theme}>
         <br />
-        <Typography variant="h4">IPP Events Calendar</Typography>
+        <Typography variant="h4">Upcoming IPP Events</Typography>
         <br />
         <div style={{ width: "90%" }}>
           {/* Configure FullCalendar component */}
@@ -151,16 +172,23 @@ export default function Events() {
               right: "dayGridMonth,timeGridWeek,timeGridDay",
             }}
             height="80vh"
-            // eventClick={handleEventClick}
           />
         </div>
-        <br />
-        <div class="bounce" style={{ width: "100%" }}>
-          <ArrowDownwardIcon />
+        <div
+          class="bounce"
+          style={{
+            position: "absolute",
+            bottom: "2%",
+            right: "2%",
+            opacity: arrowOpacity,
+          }}
+        >
+          <ArrowDownwardIcon style={{ scale: "1.5" }} />
         </div>
         <br />
+        <br />
         <Typography variant="h4" align="center">
-          Past Events
+          Past IPP Events
         </Typography>
         <div style={{ width: "80%", margin: "auto" }}>
           <Box m={4}>
@@ -182,11 +210,15 @@ export default function Events() {
                       alt={item.title}
                     />
                     <CardContent style={{ flexGrow: 1 }}>
-                      <Typography variant="h5" component="h2">{item.title}</Typography>
-                      <br/>
+                      <Typography variant="h5" component="h2">
+                        {item.title}
+                      </Typography>
+                      <br />
                       <Typography variant="body1">Date: {item.date}</Typography>
-                      <br/>
-                      <Typography variant="body1">Location: {item.location}</Typography>
+                      <br />
+                      <Typography variant="body1">
+                        Location: {item.location}
+                      </Typography>
                     </CardContent>
                     <Box p={2}>
                       <Button
@@ -209,19 +241,28 @@ export default function Events() {
                             maxHeight: "50vh",
                             padding: "2rem",
                             boxShadow: 24,
+                            overflowY: "auto",
                           }}
                         >
                           <Typography variant="h5" component="h2">
                             {item.title}
                           </Typography>
-                          <br/>
-                          <Typography variant="body1">
+                          <br />
+                          <Typography
+                            variant="body1"
+                            style={{ whiteSpace: "pre-wrap" }}
+                          >
                             {item.description}
                           </Typography>
-                          <br/>
-                          <Button variant="contained" onClick={() => handleClose(item.title)}>
-                            Close
-                          </Button>
+                          <br />
+                          <Box display="flex" justifyContent="flex-end">
+                            <Button
+                              variant="contained"
+                              onClick={() => handleClose(item.title)}
+                            >
+                              Close
+                            </Button>
+                          </Box>
                         </Card>
                       </Modal>
                     </Box>
