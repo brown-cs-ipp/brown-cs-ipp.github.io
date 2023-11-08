@@ -25,6 +25,13 @@ import {
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import "./Events.css";
 import event_img from "./event.jpg";
+import career_advising_img from "./career_advising.jpeg";
+import industry_night_img from "./industry_night.jpeg";
+import steven_zhang_img from "./steven_zhang.jpeg";
+import linkedin_img from "./linkedin.png"
+import bloomberg_img from "./bloomberg.png"
+import solar_stewards_img from "./solar_stewards.png"
+import ascend_img from "./ascend.jpg"
 
 // Create a custom theme for MUI components
 const theme = createTheme({
@@ -44,13 +51,36 @@ const theme = createTheme({
 
 const pastEvents = [
   {
-    title: "Peer Career Advising Panel",
-    date: "Wednesday November 9th, 2022, 5:30pm",
-    location: "Macmillan Hall 117",
-    description: `We welcomed students to our CS Careers Peer Advising Panel, hosted by the Industry Partners Program. The event featured four upperclassmen speakers from diverse backgrounds, sharing insights about their journeys and experiences within the CS industry, alongside invaluable recruiting advice. Attendees had the opportunity to learn about identifying suitable internships and jobs and planning their future trajectories in the CS field. An interactive Q&A session allowed participants to address all their CS-related queries. 
+    title: "Industry Night – Deloitte and Jane Street",
+    date: "Tuesday September 19th, 2023, 5:30pm EDT",
+    location:
+      "Watson Center for Information Technology (CIT), 3rd Floor Atrium",
+    description: `Industry night was an engaging event that provided students with valuable insights into industry opportunities. The event featured two prominent industry partners, Deloitte and Jane Street, who shared information about the companies they represented and discussed internship and full-time job opportunities. Attendees also had the opportunity to ask questions and gain a deeper understanding of these organizations.
 
-We were pleased to host students across various CS experience levels. Those with even a fleeting interest in CS joined us, gleaning insights from firsthand accounts in diverse tech sectors and having their pressing questions addressed. After the event, students stayed to chat with panelists informally and ask individual questions.`,
-    image: event_img,
+The event took place on the 3rd floor of the CIT, where each company delivered short pitches to the students. Afterward, the gathering moved to the 3rd floor for food and conversations, creating an excellent networking opportunity for all participants.
+
+This event was a significant success, attracting a substantial turnout of over 400 students eager to explore career prospects and engage with industry leaders. While this event has concluded, we encourage you to stay connected with Brown Computer Science for future events and opportunities.`,
+    image: industry_night_img,
+  },
+  {
+    title: "Climate Tech with Steven Zhang and Option Zero",
+    date: "Thursday September 14th, 2023, 5:30pm EDT",
+    location: "Zoom",
+    description: `We welcomed Steven Zhang from ClimateTechList and Jamie and Jason Curtis from OptionZero for an info session about careers in the intersection between software and climate. 
+
+Steven Zhang runs ClimateTechList, a job board that tracks thousands of job openings at high impact tech companies, with filterable categories to maximize your job search. With many students interested in the climate space, Steven was able to contextualize what it means to work in climate software, describing the different kinds of companies and how their technological products directly or indirectly result in climate action, providing us with a more nuanced understanding of the climate-tech space. 
+
+Jaime and Jason Curtis are a husband and wife team that run Option Zero, a software consultancy for climate companies and initatives. They provided insightful career advice, comparing both of their career paths since graduating college, and spoke about why they moved from company to company, and then eventually started their own consultancy. They emphasized weighing the costs and benefits of working at large tech companies versus smaller startups, and seeking opportunities based on whether you are interested in gaining mentorship or ownership over your work.`,
+    image: steven_zhang_img,
+  },
+  {
+    title: "Bloomberg Info Session",
+    date: "Tuesday, September 12th, 2023, 5:30pm EDT",
+    location:
+      "Watson Center for Information Technology (CIT), 3rd Floor Atrium",
+    description:
+      "Bloomberg, one of the official Brown CS Industry Partners, joined us in person at Brown for an info-session about their hiring opportunities and job culture. This info session involved a technical interview workshop, where students learned how to ace a technical interview when applying for the role of software engineer.",
+    image: bloomberg_img,
   },
   {
     title: "Ascend Analytics Info Session",
@@ -65,15 +95,16 @@ The company emphasized accurate modeling of risk variables amidst evolving energ
 They provided clients open access to a dedicated team of energy analysts and system experts to maximize solution value.
 
 For more information about Ascend Analytics, visit their website or contact them directly.`,
-    image: event_img,
+    image: ascend_img,
   },
   {
-    title: "Info Session with Dana from Solar Stewards",
-    date: "2022",
-    location: "",
-    description:
-      "Dana Clare Redden, Brown University alumnus, joined us at Brown University via Zoom to speak about her work at Solar Stewards and the internship opportunities available for students who have experience with CS courses and are interested in enviornmental, societal, and governance goals (ESG) with an innovative public-private-partnership for distributed generation solar development. Dana was seeking interns from multiple fields, project management, business strategy, blockchain, and students with interest in low-code platforms like Bubble.io.",
-    image: event_img,
+    title: "Peer Career Advising Panel",
+    date: "Wednesday November 9th, 2022, 5:30pm",
+    location: "Macmillan Hall 117",
+    description: `We welcomed students to our CS Careers Peer Advising Panel, hosted by the Industry Partners Program. The event featured four upperclassmen speakers from diverse backgrounds, sharing insights about their journeys and experiences within the CS industry, alongside invaluable recruiting advice. Attendees had the opportunity to learn about identifying suitable internships and jobs and planning their future trajectories in the CS field. An interactive Q&A session allowed participants to address all their CS-related queries. 
+
+We were pleased to host students across various CS experience levels. Those with even a fleeting interest in CS joined us, gleaning insights from firsthand accounts in diverse tech sectors and having their pressing questions addressed. After the event, students stayed to chat with panelists informally and ask individual questions.`,
+    image: career_advising_img,
   },
   {
     title: "LinkedIn Headshot Event",
@@ -81,39 +112,15 @@ For more information about Ascend Analytics, visit their website or contact them
     location: "Watson Center for Information Technology (CIT), Room 101",
     description:
       "The IPP team welcomed students to drop-in and take a LinkedIn headshot in the first floor of the CIT, with over 100 student attendees taking advantage of this free opportunity. We will be running more professional headshot drop-in events soon, so be on the lookout for announcements if you missed our last one.",
-    image: event_img,
+    image: linkedin_img,
   },
   {
-    title: "Bloomberg Info Session",
-    date: "Tuesday, September 12th, 2023, 5:30pm EDT",
-    location:
-      "Watson Center for Information Technology (CIT), 3rd Floor Atrium",
+    title: "Info Session with Dana from Solar Stewards",
+    date: "2022",
+    location: "",
     description:
-      "Bloomberg, one of the official Brown CS Industry Partners, joined us in person at Brown for an info-session about their hiring opportunities and job culture. This info session involved a technical interview workshop, where students learned how to ace a technical interview when applying for the role of software engineer.",
-    image: event_img,
-  },
-  {
-    title: "Industry Night – Deloitte and Jane Street",
-    date: "Tuesday September 19th, 2023, 5:30pm EDT",
-    location:
-      "Watson Center for Information Technology (CIT), 3rd Floor Atrium",
-    description: `Industry night was an engaging event that provided students with valuable insights into industry opportunities. The event featured two prominent industry partners, Deloitte and Jane Street, who shared information about the companies they represented and discussed internship and full-time job opportunities. Attendees also had the opportunity to ask questions and gain a deeper understanding of these organizations.
-
-The event took place on the 3rd floor of the CIT, where each company delivered short pitches to the students. Afterward, the gathering moved to the 3rd floor for food and conversations, creating an excellent networking opportunity for all participants.
-
-This event was a significant success, attracting a substantial turnout of over 400 students eager to explore career prospects and engage with industry leaders. While this event has concluded, we encourage you to stay connected with Brown Computer Science for future events and opportunities.`,
-    image: event_img,
-  },
-  {
-    title: "Climate Tech with Steven Zhang and Option Zero",
-    date: "Thursday September 14th, 2023, 5:30pm EDT",
-    location: "Zoom",
-    description: `We welcomed Steven Zhang from ClimateTechList and Jamie and Jason Curtis from OptionZero for an info session about careers in the intersection between software and climate. 
-
-Steven Zhang runs ClimateTechList, a job board that tracks thousands of job openings at high impact tech companies, with filterable categories to maximize your job search. With many students interested in the climate space, Steven was able to contextualize what it means to work in climate software, describing the different kinds of companies and how their technological products directly or indirectly result in climate action, providing us with a more nuanced understanding of the climate-tech space. 
-
-Jaime and Jason Curtis are a husband and wife team that run Option Zero, a software consultancy for climate companies and initatives. They provided insightful career advice, comparing both of their career paths since graduating college, and spoke about why they moved from company to company, and then eventually started their own consultancy. They emphasized weighing the costs and benefits of working at large tech companies versus smaller startups, and seeking opportunities based on whether you are interested in gaining mentorship or ownership over your work.`,
-    image: event_img,
+      "Dana Clare Redden, Brown University alumnus, joined us at Brown University via Zoom to speak about her work at Solar Stewards and the internship opportunities available for students who have experience with CS courses and are interested in enviornmental, societal, and governance goals (ESG) with an innovative public-private-partnership for distributed generation solar development. Dana was seeking interns from multiple fields, project management, business strategy, blockchain, and students with interest in low-code platforms like Bubble.io.",
+    image: solar_stewards_img,
   },
 ];
 

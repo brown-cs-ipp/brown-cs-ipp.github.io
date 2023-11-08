@@ -122,7 +122,7 @@ export default function NavBar() {
 
             <NavLink
               className="navbar-links"
-              to="/blogs"
+              to="/blog"
               style={({ isActive }) => ({
                 color: isActive ? "#193AA5" : "#000000",
                 borderBottom: isActive ? "2px solid #193AA5" : "none",
@@ -130,7 +130,7 @@ export default function NavBar() {
               })}
             >
               <Typography>
-                <b>BLOGS</b>
+                <b>BLOG</b>
               </Typography>
             </NavLink>
           </ThemeProvider>
@@ -225,7 +225,7 @@ export default function NavBar() {
               <NavLink
                 className="navbar-links-mobile"
                 onClick={toggleMobileMenu}
-                to="/blogs"
+                to="/blog"
                 style={({ isActive }) => ({
                   color: isActive ? "#193AA5" : "#000000",
                   background: isActive ? "#fff" : "#fff",
@@ -233,7 +233,7 @@ export default function NavBar() {
                 })}
               >
                 <Typography>
-                  <b>BLOGS</b>
+                  <b>BLOG</b>
                 </Typography>
               </NavLink>
             </div>

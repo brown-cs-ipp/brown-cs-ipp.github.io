@@ -16,7 +16,7 @@ import {
   isMobile,
 } from "react-device-detect";
 import { createTheme, ThemeProvider } from "@mui/material";
-import "./Blogs.css";
+import "./Blog.css";
 import blog_img from "./blog.jpg";
 
 const theme = createTheme({
@@ -34,7 +34,7 @@ const theme = createTheme({
   },
 });
 
-const blogsData = [
+const blogData = [
   {
     title: "Blog Post 1",
     date: "Jan 1, 2021",
@@ -61,18 +61,18 @@ const blogsData = [
   },
 ];
 
-export default function Blogs() {
+export default function Blog() {
   return (
     <BrowserView>
       <ThemeProvider theme={theme}>
         <br />
         <Typography variant="h4" align="center">
-          Blogs
+          Blog
         </Typography>
         <div style={{ width: "80%", margin: "auto" }}>
           <Box m={4}>
             <Grid container spacing={4} alignItems="stretch">
-              {blogsData.map((item) => (
+              {blogData.map((item) => (
                 <Grid item xs={4} key={item.title}>
                   <Card
                     style={{

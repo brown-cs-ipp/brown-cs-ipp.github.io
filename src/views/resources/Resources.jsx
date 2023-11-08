@@ -23,6 +23,7 @@ import csDept from "./CS-Dept.png";
 import brownConnect from "./Brown-Connect.png";
 import handshake from "./Handshake.png";
 import climateTech from "./Climate-Tech.png";
+import recruiting from "./recruiting.png"
 
 const theme = createTheme({
   typography: {
@@ -78,6 +79,12 @@ const linksData = [
     image: climateTech,
     link: "https://www.climatetechlist.com/university",
   },
+  {
+    title: "Recruiting Policies for Students",
+    description: "Student Recruitment Guidelines and Policies.",
+    image: recruiting,
+    link: "https://career-center.brown.edu/jobs-internships/recruiting/recruiting-policies-students"
+  }
 ];
 
 export default function Resources() {
