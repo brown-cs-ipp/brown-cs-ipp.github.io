@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ff54a83c.css",
-    "main.js": "/static/js/main.83e99edd.js",
+    "main.js": "/static/js/main.f7cc3a7f.js",
     "static/media/CIT_wide.jpg": "/static/media/CIT_wide.408993d66af434bc1c54.jpg",
     "static/media/Justin_Picture.jpg": "/static/media/Justin_Picture.bfb46a505540e5a5ed31.jpg",
     "static/media/students.jpg": "/static/media/students.4a2497d3d9ff49b7d1a1.jpg",
@@ -29,7 +29,7 @@
     "static/media/badges.png": "/static/media/badges.d861c03de652f9817d74.png",
     "static/media/Jeff_Picture.jpg": "/static/media/Jeff_Picture.95fefd9192cc6ea031af.jpg",
     "static/media/brownlogo.png": "/static/media/brownlogo.294cb6c7eb75758dd2ec.png",
-    "static/media/blog.jpg": "/static/media/blog.887f2309aa867419ca41.jpg",
+    "static/media/IPP-logo.png": "/static/media/IPP-logo.7c847c358108bc846488.png",
     "static/media/ipp-logo.png": "/static/media/ipp-logo.7c847c358108bc846488.png",
     "static/media/bloomberg.png": "/static/media/bloomberg.e22827922c0a7e73eb3d.png",
     "static/media/ipp_badge_growth.png": "/static/media/ipp_badge_growth.f83965796b41552d7428.png",
@@ -41,10 +41,10 @@
     "static/media/ascend.jpg": "/static/media/ascend.3e375dbb285f1841ed49.jpg",
     "index.html": "/index.html",
     "main.ff54a83c.css.map": "/static/css/main.ff54a83c.css.map",
-    "main.83e99edd.js.map": "/static/js/main.83e99edd.js.map"
+    "main.f7cc3a7f.js.map": "/static/js/main.f7cc3a7f.js.map"
   },
   "entrypoints": [
     "static/css/main.ff54a83c.css",
-    "static/js/main.83e99edd.js"
+    "static/js/main.f7cc3a7f.js"
   ]
 }
