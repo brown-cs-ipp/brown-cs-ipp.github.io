@@ -153,6 +153,7 @@ export default function NavBar() {
           <div
             className="navbar-links-row"
             id={isNavExpanded ? "menu-visible" : "menu-hidden"}
+            style={{ flexDirection: 'column' }}
           >
             <div className="navbar-links-mobile">
               <NavLink
