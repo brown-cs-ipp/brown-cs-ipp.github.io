@@ -58,15 +58,30 @@ On November 14, we will be hosting College-to-Climate for an in-person, interact
 
 export default function Blog() {
   return (
-    <BrowserView>
-      <ThemeProvider theme={theme}>
-        <br />
-        <Typography variant="h4" align="center">
-          Blog
-        </Typography>
-        <GridCards data={blogData} />
-        <br />
-      </ThemeProvider>
-    </BrowserView>
+    <div>
+      <BrowserView>
+        <ThemeProvider theme={theme}>
+          <br />
+          <Typography variant="h4" align="center">
+            Blog
+          </Typography>
+          <br />
+          <GridCards data={blogData} xs={4} />
+          <br />
+        </ThemeProvider>
+      </BrowserView>
+
+      <MobileView>
+        <ThemeProvider theme={theme}>
+          <br />
+          <Typography variant="h4" align="center">
+            Blog
+          </Typography>
+          <br />
+          <GridCards data={blogData} xs={12} />
+          <br />
+        </ThemeProvider>
+      </MobileView>
+    </div>
   );
 }

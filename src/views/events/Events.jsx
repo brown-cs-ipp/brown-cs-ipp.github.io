@@ -28,10 +28,10 @@ import event_img from "./event.jpg";
 import career_advising_img from "./career_advising.jpeg";
 import industry_night_img from "./industry_night.jpeg";
 import steven_zhang_img from "./steven_zhang.jpeg";
-import linkedin_img from "./linkedin.png"
-import bloomberg_img from "./bloomberg.png"
-import solar_stewards_img from "./solar_stewards.png"
-import ascend_img from "./ascend.jpg"
+import linkedin_img from "./linkedin.png";
+import bloomberg_img from "./bloomberg.png";
+import solar_stewards_img from "./solar_stewards.png";
+import ascend_img from "./ascend.jpg";
 import GridCards from "../../components/grid-cards/GridCards";
 
 // Create a custom theme for MUI components
@@ -157,51 +157,101 @@ export default function Events() {
   };
 
   return (
-    <BrowserView align="center">
-      <ThemeProvider theme={theme}>
-        <br />
-        <Typography variant="h4">Upcoming IPP Events</Typography>
-        <br />
-        <div style={{ width: "90%" }}>
-          {/* Configure FullCalendar component */}
-          <FullCalendar
-            ref={calendarRef}
-            plugins={[dayGridPlugin, timeGridPlugin, googleCalendarPlugin]}
-            googleCalendarApiKey="AIzaSyCjUHYGVSyML1lCpnIeNDribmgF5RD4LA0"
-            events={{
-              googleCalendarId:
-                "c_fd7cdd4a776df9bc604b0cb9971348a49bd1a40ff03543ba97718a16a81a4c86@group.calendar.google.com",
-              color: "#193AA5",
-              textColor: "#fff",
+    <div>
+      <BrowserView align="center">
+        <ThemeProvider theme={theme}>
+          <br />
+          <Typography variant="h4">Upcoming IPP Events</Typography>
+          <br />
+          <div style={{ width: "90%" }}>
+            {/* Configure FullCalendar component */}
+            <FullCalendar
+              ref={calendarRef}
+              plugins={[dayGridPlugin, timeGridPlugin, googleCalendarPlugin]}
+              googleCalendarApiKey="AIzaSyCjUHYGVSyML1lCpnIeNDribmgF5RD4LA0"
+              events={{
+                googleCalendarId:
+                  "c_fd7cdd4a776df9bc604b0cb9971348a49bd1a40ff03543ba97718a16a81a4c86@group.calendar.google.com",
+                color: "#193AA5",
+                textColor: "#fff",
+              }}
+              headerToolbar={{
+                left: "prev,next today",
+                center: "title",
+                right: "dayGridMonth,timeGridWeek,timeGridDay",
+              }}
+              height="80vh"
+            />
+          </div>
+          <div
+            class="bounce"
+            style={{
+              position: "absolute",
+              bottom: "2%",
+              right: "2%",
+              opacity: arrowOpacity,
             }}
-            headerToolbar={{
-              left: "prev,next today",
-              center: "title",
-              right: "dayGridMonth,timeGridWeek,timeGridDay",
+          >
+            <ArrowDownwardIcon style={{ scale: "1.5" }} />
+          </div>
+          <br />
+          <br />
+          <Typography variant="h4" align="center">
+            Past IPP Events
+          </Typography>
+          <br/>
+          <GridCards data={pastEvents} xs={4} />
+          <br />
+        </ThemeProvider>
+      </BrowserView>
+
+      <MobileView>
+        <ThemeProvider theme={theme}>
+          <br />
+          <Typography variant="h4">Upcoming IPP Events</Typography>
+          <br />
+          <div style={{ width: "90%" }}>
+            {/* Configure FullCalendar component */}
+            <FullCalendar
+              ref={calendarRef}
+              plugins={[dayGridPlugin, timeGridPlugin, googleCalendarPlugin]}
+              googleCalendarApiKey="AIzaSyCjUHYGVSyML1lCpnIeNDribmgF5RD4LA0"
+              events={{
+                googleCalendarId:
+                  "c_fd7cdd4a776df9bc604b0cb9971348a49bd1a40ff03543ba97718a16a81a4c86@group.calendar.google.com",
+                color: "#193AA5",
+                textColor: "#fff",
+              }}
+              headerToolbar={{
+                left: "prev,next today",
+                center: "title",
+                right: "dayGridMonth,timeGridWeek,timeGridDay",
+              }}
+              height="80vh"
+            />
+          </div>
+          <div
+            class="bounce"
+            style={{
+              position: "absolute",
+              bottom: "2%",
+              right: "2%",
+              opacity: arrowOpacity,
             }}
-            height="80vh"
-          />
-        </div>
-        <div
-          class="bounce"
-          style={{
-            position: "absolute",
-            bottom: "2%",
-            right: "2%",
-            opacity: arrowOpacity,
-          }}
-        >
-          <ArrowDownwardIcon style={{ scale: "1.5" }} />
-        </div>
-        <br />
-        <br />
-        <Typography variant="h4" align="center">
-          Past IPP Events
-        </Typography>
-        <GridCards data={pastEvents} />
-        <br />
-      </ThemeProvider>
-    </BrowserView>
+          >
+            <ArrowDownwardIcon style={{ scale: "1.5" }} />
+          </div>
+          <br />
+          <br />
+          <Typography variant="h4" align="center">
+            Past IPP Events
+          </Typography>
+          <br />
+          <GridCards data={pastEvents} xs={12}/>
+          <br />
+        </ThemeProvider>
+      </MobileView>
+    </div>
   );
 }
 
