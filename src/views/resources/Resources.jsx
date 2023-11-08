@@ -99,7 +99,7 @@ export default function Resources() {
             Useful Resources
           </Typography>
           <br />
-          <GridCards data={linksData} xs={4} />
+          <GridCards data={linksData} isMobile={false} />
           <br />
         </ThemeProvider>
       </BrowserView>
@@ -110,7 +110,7 @@ export default function Resources() {
             Useful Resources
           </Typography>
           <br />
-          <GridCards data={linksData} xs={12}/>
+          <GridCards data={linksData} isMobile={true} />
           <br />
         </ThemeProvider>
       </MobileView>

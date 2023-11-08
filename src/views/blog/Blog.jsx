@@ -66,7 +66,7 @@ export default function Blog() {
             Blog
           </Typography>
           <br />
-          <GridCards data={blogData} xs={4} />
+          <GridCards data={blogData} isMobile={false} />
           <br />
         </ThemeProvider>
       </BrowserView>
@@ -78,7 +78,7 @@ export default function Blog() {
             Blog
           </Typography>
           <br />
-          <GridCards data={blogData} xs={12} />
+          <GridCards data={blogData} isMobile={true} />
           <br />
         </ThemeProvider>
       </MobileView>
