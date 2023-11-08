@@ -17,7 +17,8 @@ import {
 } from "react-device-detect";
 import { createTheme, ThemeProvider } from "@mui/material";
 import "./Blog.css";
-import blog_img from "./blog.jpg";
+import IPP_logo from "./IPP-logo.png";
+import GridCards from "../../components/grid-cards/GridCards";
 
 const theme = createTheme({
   typography: {
@@ -36,28 +37,22 @@ const theme = createTheme({
 
 const blogData = [
   {
-    title: "Blog Post 1",
-    date: "Jan 1, 2021",
-    description: "Description 1",
-    image: blog_img,
-  },
-  {
-    title: "Blog Post 2",
-    date: "Jan 2, 2021",
-    description: "Description 2",
-    image: blog_img,
-  },
-  {
-    title: "Blog Post 3",
-    date: "Jan 3, 2021",
-    description: "Description 3",
-    image: blog_img,
-  },
-  {
-    title: "Blog Post 4",
-    date: "Jan 4, 2021",
-    description: "Description 4",
-    image: blog_img,
+    title: "Introducing IPP! Meet our new website.",
+    date: "Nov. 8th, 2023",
+    description: `Welcome: What is IPP? 
+
+The Industry Partners Program is a Brown organization under the Computer Science Department that connects the Brown CS community with industry opportunities. Primarily, we help undergraduate students find fulfilling jobs and internships by networking with companies, co-hosting recruitment / career education events, and sharing helpful resources to democratize access to information. We are committed to helping students explore a diverse range of opportunities to find what best suits their needs, including applications of technology for social good. 
+
+Our highly collaborative team consists of undergraduate student ambassadors and CS department staff work together to coordinate events and initiatives. Student ambassador roles are paid, and we are a growing team. If you are interested in joining, view our application here. 
+
+CS-specific career resources 
+
+Searching for career opportunities is an unpredictable process that can be exciting but challenging. We work to make this website a centralized source of reliable information that can guide you throughout the process. We host live events (in-person and remote accessible), which many students attend to learn more about job-searching. Feel free to take a look at our past events to get an idea of what we’ve done before. Whether or not you are a CS concentrator, subscribe to the IPP mailing list to be notified directly about events. 
+
+Coming up: 
+
+On November 14, we will be hosting College-to-Climate for an in-person, interactive information session. Be sure to subscribe to our mailing list to receive more details and registration information for the event! `,
+    image: IPP_logo,
   },
 ];
 
@@ -69,43 +64,7 @@ export default function Blog() {
         <Typography variant="h4" align="center">
           Blog
         </Typography>
-        <div style={{ width: "80%", margin: "auto" }}>
-          <Box m={4}>
-            <Grid container spacing={4} alignItems="stretch">
-              {blogData.map((item) => (
-                <Grid item xs={4} key={item.title}>
-                  <Card
-                    style={{
-                      height: "100%",
-                      display: "flex",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <CardMedia
-                      component="img"
-                      height="200vh"
-                      image={item.image}
-                      alt={item.title}
-                    />
-                    <CardContent style={{ flexGrow: 1 }}>
-                      <Typography variant="h5">{item.title}</Typography>
-                      <Typography>{item.description}</Typography>
-                    </CardContent>
-                    <Box p={2}>
-                      <Button
-                        variant="contained"
-                        target="_blank"
-                        href={item.link}
-                      >
-                        Read More
-                      </Button>
-                    </Box>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
-          </Box>
-        </div>
+        <GridCards data={blogData} />
         <br />
       </ThemeProvider>
     </BrowserView>
