@@ -200,7 +200,7 @@ export default function Events() {
             Past IPP Events
           </Typography>
           <br/>
-          <GridCards data={pastEvents} xs={4} />
+          <GridCards data={pastEvents} xs={4} isMobile={false} />
           <br />
         </ThemeProvider>
       </BrowserView>
@@ -247,7 +247,7 @@ export default function Events() {
             Past IPP Events
           </Typography>
           <br />
-          <GridCards data={pastEvents} xs={12}/>
+          <GridCards data={pastEvents} isMobile={true}/>
           <br />
         </ThemeProvider>
       </MobileView>

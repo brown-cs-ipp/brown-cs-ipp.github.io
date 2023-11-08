@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import React, { useState, useEffect, useRef } from "react";
 
-export default function GridCards({ data, xs }) {
+export default function GridCards({ data, isMobile }) {
   // console.log(data);
   const [openModal, setOpenModal] = useState({});
 
@@ -22,8 +22,31 @@ export default function GridCards({ data, xs }) {
     setOpenModal({ ...openModal, [title]: false });
   };
 
+  const xs = isMobile ? 12 : 4;
+
+  const modalStyle = isMobile
+    ? {
+        position: "absolute",
+        top: "0%",
+        left: "0%",
+        width: "100vw",
+        height: "100vh",
+        overflowY: "auto",
+      }
+    : {
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        maxWidth: "75vw",
+        maxHeight: "75vh",
+        padding: "2rem",
+        boxShadow: 24,
+        overflowY: "auto",
+      };
+
   return (
-    <Box style={{ width: "80%", margin: "auto" }}>
+    <Box style={{ width: "90%", margin: "auto" }}>
       <Grid container spacing={6} alignItems="stretch">
         {data.map((item) => (
           <Grid item xs={xs} key={item.title}>
@@ -76,11 +99,7 @@ export default function GridCards({ data, xs }) {
                   </Button>
                 )}
                 {item.link && (
-                  <Button
-                    variant="contained"
-                    target="_blank"
-                    href={item.link}
-                  >
+                  <Button variant="contained" target="_blank" href={item.link}>
                     Website
                   </Button>
                 )}
@@ -88,19 +107,7 @@ export default function GridCards({ data, xs }) {
                   open={openModal[item.title] || false}
                   onClose={() => handleClose(item.title)}
                 >
-                  <Card
-                    style={{
-                      position: "absolute",
-                      top: "50%",
-                      left: "50%",
-                      transform: "translate(-50%, -50%)",
-                      maxWidth: "50vw",
-                      maxHeight: "50vh",
-                      padding: "2rem",
-                      boxShadow: 24,
-                      overflowY: "auto",
-                    }}
-                  >
+                  <Card style={modalStyle}>
                     <Typography variant="h5" component="h2">
                       {item.title}
                     </Typography>
