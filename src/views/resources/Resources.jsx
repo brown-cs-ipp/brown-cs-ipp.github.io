@@ -44,46 +44,46 @@ const theme = createTheme({
 const linksData = [
   {
     title: "Brown Site",
-    inlineDescription: "Brown's Official Site.",
+    description: "Brown's Official Site.",
     image: brownSite,
     link: "https://www.brown.edu/",
   },
   {
     title: "CAB",
-    inlineDescription: "Courses @ Brown.",
+    description: "Courses @ Brown.",
     image: cabSite,
     link: "https://cab.brown.edu/",
   },
   {
     title: "Handshake",
-    inlineDescription:
+    description:
       "Handshake is Brown’s online recruiting platform for students and alumni that simplifies the search for internships, jobs and learning opportunities.",
     image: handshake,
     link: "https://brown.joinhandshake.com/login",
   },
   {
     title: "BrownConnect",
-    inlineDescription:
+    description:
       "BrownConnect links students, alumni, parents and friends to extend learning beyond the classroom and promote mentoring and professional growth long past graduation.",
     image: brownConnect,
     link: "https://brownconnect.brown.edu/ds/index",
   },
   {
     title: "CS Department Site",
-    inlineDescription: "Official Site of the CS Department.",
+    description: "Official Site of the CS Department.",
     image: csDept,
     link: "https://cs.brown.edu/",
   },
   {
     title: "ClimateTechList",
-    inlineDescription:
+    description:
       "Tracking hundreds of early career jobs, university internships, & fellowships from 1,003 climate tech companies.",
     image: climateTech,
     link: "https://www.climatetechlist.com/university",
   },
   {
     title: "Recruiting Policies for Students",
-    inlineDescription: "Student Recruitment Guidelines and Policies.",
+    description: "Student Recruitment Guidelines and Policies.",
     image: recruiting,
     link: "https://career-center.brown.edu/jobs-internships/recruiting/recruiting-policies-students",
   },

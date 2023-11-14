@@ -17,7 +17,6 @@ import {
 } from "react-device-detect";
 import { createTheme, ThemeProvider } from "@mui/material";
 import "./Blog.css";
-import IPP_logo from "./IPP-logo.png";
 import GridCards from "../../components/grid-cards/GridCards";
 
 const theme = createTheme({
@@ -38,12 +37,12 @@ const theme = createTheme({
 const blogData = [
   {
     title: "Introducing IPP! Meet our new website.",
-    date: "Nov. 8th, 2023",
-    description: `Welcome: What is IPP? 
+    date: "November 8th, 2023",
+    content: `Welcome: What is IPP?
 
 The Industry Partners Program is a Brown organization under the Computer Science Department that connects the Brown CS community with industry opportunities. Primarily, we help undergraduate students find fulfilling jobs and internships by networking with companies, co-hosting recruitment / career education events, and sharing helpful resources to democratize access to information. We are committed to helping students explore a diverse range of opportunities to find what best suits their needs, including applications of technology for social good. 
 
-Our highly collaborative team consists of undergraduate student ambassadors and CS department staff work together to coordinate events and initiatives. Student ambassador roles are paid, and we are a growing team. If you are interested in joining, view our application here. 
+Our highly collaborative team consists of undergraduate student ambassadors and CS department staff work together to coordinate events and initiatives. Student ambassador roles are paid, and we are a growing team. If you are interested in joining, be sure to keep an eye out for announcements about applications. 
 
 CS-specific career resources 
 
@@ -51,8 +50,7 @@ Searching for career opportunities is an unpredictable process that can be excit
 
 Coming up: 
 
-On November 14, we will be hosting College-to-Climate for an in-person, interactive information session. Be sure to subscribe to our mailing list to receive more details and registration information for the event! `,
-    image: IPP_logo,
+On November 14, we will be hosting College-to-Climate for an in-person, interactive information session. Be sure to subscribe to our mailing list to receive more details and registration information for the event!`,
   },
 ];
 
@@ -66,7 +64,7 @@ export default function Blog() {
             Blog
           </Typography>
           <br />
-          <GridCards data={blogData} isMobile={false} />
+          <GridCards data={blogData} isMobile={true} />
           <br />
         </ThemeProvider>
       </BrowserView>

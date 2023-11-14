@@ -29,9 +29,9 @@ export default function GridCards({ data, isMobile }) {
         position: "absolute",
         top: "0%",
         left: "0%",
-        width: "100vw",
         height: "100vh",
         overflowY: "auto",
+        padding: "1rem",
       }
     : {
         position: "absolute",
@@ -58,12 +58,14 @@ export default function GridCards({ data, isMobile }) {
                 flexDirection: "column",
               }}
             >
-              <CardMedia
-                component="img"
-                height="200vh"
-                image={item.image}
-                alt={item.title}
-              />
+              {item.image && (
+                <CardMedia
+                  component="img"
+                  height="200vh"
+                  image={item.image}
+                  alt={item.title}
+                />
+              )}
               <CardContent style={{ flexGrow: 1 }}>
                 <Typography variant="h5" component="h2">
                   {item.title}
@@ -82,15 +84,15 @@ export default function GridCards({ data, isMobile }) {
                     </Typography>
                   </div>
                 )}
-                {item.inlineDescription && (
+                {item.description && (
                   <div>
                     <br />
-                    <Typography>{item.inlineDescription}</Typography>
+                    <Typography>{item.description}</Typography>
                   </div>
                 )}
               </CardContent>
               <Box p={2} display="flex" justifyContent="flex-end">
-                {item.description && (
+                {item.content && (
                   <Button
                     variant="contained"
                     onClick={() => handleOpen(item.title)}
@@ -116,17 +118,20 @@ export default function GridCards({ data, isMobile }) {
                       variant="body1"
                       style={{ whiteSpace: "pre-wrap" }}
                     >
-                      {item.description}
+                      {item.content}
                     </Typography>
                     <br />
                     <Box display="flex" justifyContent="flex-end">
                       <Button
                         variant="contained"
                         onClick={() => handleClose(item.title)}
+                        maxHeight="1rem"
+                        maxWidth="1rem"
                       >
                         Close
                       </Button>
                     </Box>
+                    <br />
                   </Card>
                 </Modal>
               </Box>
