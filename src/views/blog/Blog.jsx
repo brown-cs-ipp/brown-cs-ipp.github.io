@@ -21,6 +21,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import "./Blog.css";
 import GridCards from "../../components/grid-cards/GridCards";
 import { create } from "@mui/material/styles/createTransitions";
+import { AppBlockingSharp } from "@mui/icons-material";
 
 const theme = createTheme({
   typography: {
@@ -41,10 +42,9 @@ const blogData = [
   {
     title: "Introducing IPP! Meet our new website.",
     date: "November 8th, 2023",
+    content: <testComponent />,
   },
 ];
-
-const testData = [];
 
 function BlogCard() {
   const [openModal, setOpenModal] = useState({});
@@ -58,7 +58,7 @@ function BlogCard() {
   };
 
   return (
-    <Box style={{ width: "90%", margin: "auto" }}>
+    <Box style={{ width: "30%", marginLeft: "5rem" }}>
       <Card
         align="left"
         style={{
@@ -86,19 +86,22 @@ function BlogCard() {
             <Card
               style={{
                 position: "absolute",
-                top: "0%",
-                left: "0%",
-                height: "100vh",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                maxWidth: "75vw",
+                maxHeight: "75vh",
+                padding: "2rem",
+                boxShadow: 24,
                 overflowY: "auto",
-                padding: "1rem",
               }}
             >
               <Typography variant="h4" align="center">
                 Introducing IPP! Meet our new website.
               </Typography>
-              <br/>
+              <br />
               <Typography variant="h5">Welcome: What is IPP?</Typography>
-              <br/>
+              <br />
               <Typography variant="body1">
                 The Industry Partners Program is a Brown organization under the
                 Computer Science Department that connects the Brown CS community
@@ -117,9 +120,9 @@ function BlogCard() {
                 we are a growing team. If you are interested in joining, be sure
                 to keep an eye out for announcements about applications.
               </Typography>
-              <br/>
+              <br />
               <Typography variant="h5">CS-specific career resources</Typography>
-              <br/>
+              <br />
               <Typography variant="body1">
                 Searching for career opportunities is an unpredictable process
                 that can be exciting but challenging. We work to make this
@@ -129,12 +132,15 @@ function BlogCard() {
                 about job-searching. Feel free to take a look at our{" "}
                 <Link href="#/events">past events</Link> to get an idea of what
                 we’ve done before. Whether or not you are a CS concentrator,
-                subscribe to the <Link href="https://lists.cs.brown.edu/sympa/subscribe/ipp-annc">IPP mailing list</Link> to be notified directly about
-                events.
+                subscribe to the{" "}
+                <Link href="https://lists.cs.brown.edu/sympa/subscribe/ipp-annc">
+                  IPP mailing list
+                </Link>{" "}
+                to be notified directly about events.
               </Typography>
-              <br/>
+              <br />
               <Typography variant="h5">Coming up:</Typography>
-              <br/>
+              <br />
               <Typography variant="body1">
                 On November 14, we will be hosting College-to-Climate for an
                 in-person, interactive information session. Be sure to subscribe

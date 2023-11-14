@@ -81,8 +81,8 @@ a {
   /* Phones */
   @media (min-width:240px) {
     .navbar-container {
-      height: 8vh;
-      padding: 0 30px;
+      height: 10vh;
+      /* padding: 0 30px; */
       width: 100vw;
       display: flex;
       justify-content: space-between;
@@ -119,13 +119,13 @@ a {
     }
 
     #menu-hidden {
-      left: -100vw;
+      top: -100vh;
       width: 100vw;
       transition: 0.5s;
     }
 
     #menu-visible {
-      left: 0;
+      top: 0;
       width: 100vw;
       transition: 0.5s;
     }

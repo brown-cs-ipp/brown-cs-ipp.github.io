@@ -147,29 +147,19 @@ export default function Events() {
 
   const [arrowOpacity, setArrowOpacity] = useState(1);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollValue = window.scrollY;
-      const newOpacity = Math.max(1 - scrollValue / 200, 0);
-      setArrowOpacity(newOpacity);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollValue = window.scrollY;
+  //     const newOpacity = Math.max(1 - scrollValue / 200, 0);
+  //     setArrowOpacity(newOpacity);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const [openModal, setOpenModal] = useState({});
-
-  const handleOpen = (title) => {
-    setOpenModal({ ...openModal, [title]: true });
-  };
-
-  const handleClose = (title) => {
-    setOpenModal({ ...openModal, [title]: false });
-  };
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <div>
