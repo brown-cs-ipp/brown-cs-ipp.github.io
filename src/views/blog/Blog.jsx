@@ -22,6 +22,7 @@ import "./Blog.css";
 import GridCards from "../../components/grid-cards/GridCards";
 import { create } from "@mui/material/styles/createTransitions";
 import { AppBlockingSharp } from "@mui/icons-material";
+import interview_img from "./ippinterview.png";
 
 const theme = createTheme({
   typography: {
@@ -58,9 +59,14 @@ function BlogCard() {
   };
 
   return (
-    <Box style={{ width: "30%", marginLeft: "5rem" }}>
+    <Box style={{
+      display: "flex",
+      flexDirection: "row", // Arrange cards horizontally
+      gap: "2rem", // Add gap between cards
+      padding: "2rem", // Padding on all sides
+    }}>
       <Card
-        align="left"
+        align="flex"
         style={{
           height: "100%",
           display: "flex",
@@ -163,7 +169,102 @@ function BlogCard() {
           </Modal>
         </Box>
       </Card>
+
+      <Card
+        align="flex"
+        style={{
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <CardContent style={{ flexGrow: 1 }}>
+          <Typography variant="h5" component="h2">
+           Introducing the IPP Interview Series: Spotlight on Brown CS Alumni
+          </Typography>
+          <br />
+          <Typography variant="body1">Date: Feb 6th, 2024</Typography>
+          <br />
+          <CardMedia
+          component="img"
+          height="120"
+          width="100"
+          image= {interview_img}
+          alt="Sample Image"
+        />
+        </CardContent>
+        <Box p={2} display="flex" justifyContent="flex-end">
+          <Button variant="contained" onClick={() => handleOpen("title")}>
+            Read More
+          </Button>
+          <Modal
+            open={openModal["title"] || false}
+            onClose={() => handleClose("title")}
+          >
+            <Card
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                maxWidth: "75vw",
+                maxHeight: "75vh",
+                padding: "2rem",
+                boxShadow: 24,
+                overflowY: "auto",
+              }}
+            >
+              <Typography variant="h4" align="center">
+                IPP Interview Series
+              </Typography>
+              <br />
+              <Typography variant="h5">Intro</Typography>
+              <br />
+              <Typography variant="body1">
+              In today's fast-paced world, networking has become an indispensable tool for career advancement. Whether you're a recent graduate or a seasoned professional, making connections in your industry can open doors to new opportunities, mentorship, and invaluable insights. However, for introverted individuals, the prospect of attending networking events or reaching out to strangers for coffee chats can be daunting.
+              </Typography>
+              <br />
+              <Typography variant="body1">
+              Recognizing the importance of networking and the diverse preferences of its members, we are proud to introduce the IPP Interview Series. This initiative aims to spotlight Brown alumni who have excelled in various professions, such as in top tech companies like Microsoft, Uber, and emerging leaders in companies like Anduril. Through a series of virtual interviews, we'll delve into their career journeys, experiences, and insights, providing valuable guidance and inspiration to current students and fellow alumni.
+
+              </Typography>
+              <br />
+              <Typography variant="h5">Who are the interviewees?</Typography>
+              <br />
+              <Typography variant="body1">
+              The series will feature a diverse range of recent graduates and seasoned professionals, including software engineers, product managers, product designers, and individuals in various leadership roles. By showcasing the breadth of talent within the Brown alumni community, we aim to demonstrate the myriad paths to success available to students and graduates of the university. Whether you're interested in breaking into the tech industry, pursuing a leadership position, or exploring unconventional career paths, the IPP Interview Series has something to offer for everyone.{" "}
+              <br></br>
+              <br></br>
+              To watch the interviews now
+                subscribe to the{" "}
+                <Link href="https://www.youtube.com/channel/UCbOjLXD0MN8GniTsX_GChgA">
+                  IPP Official Youtube Account
+                </Link>{" "}
+              </Typography>
+              <br />
+              <Typography variant="h5">Coming up:</Typography>
+              <br />
+              <Typography variant="body1">
+              Looking ahead, the IPP Interview Series will continue to expand and evolve. We're committed to highlighting the achievements of Brown alumni across industries and disciplines, providing valuable resources and insights to our community. But we need your help to make this initiative a success. If you know of any Brown CS alumni who are making waves in their field and would be interested in sharing their story, we encourage you to reach out to us. You can nominate individuals or even volunteer yourself for an interview by emailing the IPP team at brown-cs-ipp@brown.edu!
+              </Typography>
+              <br />
+              <Box display="flex" justifyContent="flex-end">
+                <Button
+                  variant="contained"
+                  onClick={() => handleClose("title")}
+                  maxHeight="1rem"
+                  maxWidth="1rem"
+                >
+                  Close
+                </Button>
+              </Box>
+              <br />
+            </Card>
+          </Modal>
+        </Box>
+      </Card>
     </Box>
+    
   );
 }
 
