@@ -193,9 +193,16 @@ function BlogCard() {
           alt="Sample Image"
         />
         </CardContent>
-        <Box p={2} display="flex" justifyContent="flex-end">
+        <Box p={3} display="flex" justifyContent="flex-end">
           <Button variant="contained" onClick={() => handleOpen("title")}>
             Read More
+          </Button>
+          <Box ml={1}></Box>
+          <Button variant="outlined"
+              component="a"
+              href="https://www.youtube.com/channel/UCbOjLXD0MN8GniTsX_GChgA"
+              target="_blank">
+            Watch Now
           </Button>
           <Modal
             open={openModal["title"] || false}
